@@ -40,11 +40,46 @@ body {
 .button1{
   background-color: white;
   color: black;
-  border-radius: 10px;
+  height: 500px;
+  width: 500px;
+  border-radius: 500px;
 }
-.button1:hover {
+.button2{
+  background-color: white;
+  color: black;
+  height: 500px;
+  width: 500px;
+  border-radius: 500px;
+}
+.button3{
+  background-color: white;
+  color: black;
+  height: 500px;
+  width: 500px;
+  border-radius: 500px;
+}
+.button1::after {
+content: "About Me";
+}
+.button1:hover::after {
+ content: "Winner";
+}
+.button2::after{
+  content:"My Experience";
+}
+.button2:hover::after{
+  content:"Alpha Level";
+}
+.button3::after{
+  content:"My Skills";
+}
+.button3:hover::after{
+  content:"Manage";
+}
+.button:hover {
   background-color: blue;
   color: white;
+  content: "Winner";
 }
 </style>
 </head>
@@ -56,20 +91,10 @@ body {
 </div>
 
 <div class='main'>
-  <button class="button button1" onCLick="clickFunction()">About Me</button>
-  <p id="button1Content" style="display: none;">winner</p>
+  <button class="button button1"></button>
+  <button class="button button2"></button>
+  <button class="button button3"></button>
 </div>
-
-<script>
-function clickFunction() {
-  var x = document.getElementById("button1Content");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
 
 </body>
 </html>
